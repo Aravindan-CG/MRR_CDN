@@ -97,7 +97,7 @@
 				//StickyBannerInstance = window?.GlanceGamingAdInterface?.showStickyBannerAd(StickyObj, bannerCallbacks);
 				replayInstance = window?.GlanceGamingAdInterface?.loadRewardedAd(replayObj, rewardedCallbacks);
 				rewardInstance = window?.GlanceGamingAdInterface?.loadRewardedAd(rewardObj, rewardedCallbacks);
-				interstitialInstance = window?.GlanceGamingAdInterface?.loadInterstitialAd(interstitialObj,interstitialCallbacks);
+				interstitialInstance = window?.GlanceGamingAdInterface?.loadInterstitialAd(StickyObj,bannerCallbacks);
 			}
 			function gameAnalytics(action, jsonStr) {
 				console.log("gameAnalytics! action: " + action + " :json: " + jsonStr);
