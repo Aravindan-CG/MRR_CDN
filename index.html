@@ -93,8 +93,8 @@
 						console.log("Error in gameAnalytics: " + err);
 					}
 				}
-				// refreshStickyBannerAd();
-				//StickyBannerInstance = window?.GlanceGamingAdInterface?.showStickyBannerAd(StickyObj, bannerCallbacks);
+				refreshStickyBannerAd();
+				StickyBannerInstance = window?.GlanceGamingAdInterface?.showStickyBannerAd(StickyObj, bannerCallbacks);
 				replayInstance = window?.GlanceGamingAdInterface?.loadRewardedAd(replayObj, rewardedCallbacks);
 				rewardInstance = window?.GlanceGamingAdInterface?.loadRewardedAd(rewardObj, rewardedCallbacks);
 				interstitialInstance = window?.GlanceGamingAdInterface?.loadInterstitialAd(interstitialObj,interstitialCallbacks);
