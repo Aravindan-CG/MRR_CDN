@@ -255,6 +255,7 @@ function runOnAdClosed() {
         rewardInstance = window.GlanceGamingAdInterface.loadRewardedAd(rewardObj, rewardedCallbacks);
     } else if(_triggerReason === 'interstitial'){
         //call game function interstitial close
+        console.log("OnInterstitial ad shown called");
         unityInstance.SendMessage("AdsManager","OnInterstitialShown");
         _triggerReason = ''
         interstitialInstance = window.GlanceGamingAdInterface.loadInterstitialAd(interstitialObj,interstitialCallbacks);
