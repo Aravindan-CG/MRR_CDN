@@ -90,8 +90,8 @@
 
 			//Called in GameManager Start() in Unity
 			function hideLoadingPage() {
-				//refreshStickyBannerAd();
-				//StickyBannerInstance = window?.GlanceGamingAdInterface?.showStickyBannerAd(StickyObj, bannerCallbacks);
+				refreshStickyBannerAd();
+				StickyBannerInstance = window?.GlanceGamingAdInterface?.showStickyBannerAd(StickyObj, bannerCallbacks);
 				replayInstance = window?.GlanceGamingAdInterface?.loadRewardedAd(replayObj, rewardedCallbacks);
 				rewardInstance = window?.GlanceGamingAdInterface?.loadRewardedAd(rewardObj, rewardedCallbacks);
 			}
