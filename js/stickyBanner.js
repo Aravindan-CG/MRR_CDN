@@ -31,3 +31,13 @@ function refreshStickyBannerAd() {
 function showStickyBannerAd(){
     $("#bannerOverlay").css("display","flex");
 }
+
+function showSticky()
+{
+    $("#bannerOverlay").css("display","flex","important");
+}
+
+function hideSticky()
+{
+    $("#bannerOverlay").css("display","none","important");
+}
