@@ -45,7 +45,7 @@
 <body>
 	<div id="gameContainer">
 		<canvas id="unity-canvas" data-pixel-art="{{{ OPTIMIZE_FOR_PIXEL_ART }}}"></canvas>
-		<script src="Build/Draft5.loader.js"></script>
+		<script src="Build/Draft6.loader.js"></script>
 		<script type="text/javascript" src="js/jquery-3.4.1.min.js "></script>
 		<script type="text/javascript" src="js/ads.js "></script>
 		<script type="text/javascript" src="js/stickyBanner.js "></script>
@@ -55,9 +55,9 @@
 			var unityInstance;
 			var communityOpened = false;
 			var config = {
-				dataUrl: "Build/a78d2edadaf64157f2ba4e26fc4fc8c4.data.unityweb",
-				frameworkUrl: "Build/082cb8db62aa38d809a6997ecce7f412.js.unityweb",
-				codeUrl: "Build/acc75848fe4094fdd7c133b22a75ab39.wasm.unityweb",
+				dataUrl: "Build/48e6ad4b3ab78df9c4b18c1d831a6589.data.unityweb",
+				frameworkUrl: "Build/71eca9d6fd8cf0834dcb9ed54e43b4a1.js.unityweb",
+				codeUrl: "Build/b14f16883e1d09a039c07e5ba8565874.wasm.unityweb",
 				streamingAssetsUrl: "StreamingAssets",
 				companyName: "ChennaiGames",
 				productName: "MR RACER",
@@ -145,13 +145,11 @@
 			{
 				if(canShow)
 				{
-					showSticky();
-					console.log("can show sticky");
+					showStickyAd();
 				}
 				else
 				{
-					hideSticky();
-					console.log("hide sticky");
+					hideStickyAd();
 				}
 			}
 
