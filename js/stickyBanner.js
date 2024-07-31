@@ -32,12 +32,12 @@ function showStickyBannerAd(){
     $("#bannerOverlay").css("display","flex");
 }
 
-function showSticky()
+function showStickyAd()
 {
     $("#bannerOverlay").css("display","flex","important");
 }
 
-function hideSticky()
+function hideStickyAd()
 {
     $("#bannerOverlay").css("display","none","important");
 }
