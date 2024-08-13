@@ -157,14 +157,17 @@
 				// Get game canvas element. Canvas ID may vary.
 				const canvas = document.querySelector("#unity-canvas");
 				const isLandscape = window.innerWidth > window.innerHeight;
-				if (isLandscape) {
+				if (isLandscape) 
+				{
 					canvas.style.left = `${margin}px`;
-					canvas.style.position = `absolute`;
-					canvas.style.marginLeft = `calc(100% - ${margin}px)`;
-				} else {
+					canvas.style.position = `relative`;
+					canvas.style.marginLeft = `0`;
+				} 
+				else 
+				{
 					canvas.style.top = `${margin}px`;
-					canvas.style.position = `absolute`;
-					canvas.style.marginTop = `calc(100% - ${margin}px)`;
+					canvas.style.position = `relative`;
+					canvas.style.marginTop = `0`;
 				}
         	}
 
