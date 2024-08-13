@@ -155,15 +155,16 @@
 
 			function setWindowMargin(margin) {
 				// Get game canvas element. Canvas ID may vary.
+				const canvas = document.querySelector("#unity-canvas");
 				const isLandscape = window.innerWidth > window.innerHeight;
 				if (isLandscape) {
 					canvas.style.left = `${margin}px`;
 					canvas.style.position = `absolute`;
-					canvas.style.marginLeft = `0`;
+					canvas.style.marginLeft = `calc(100% - ${margin}px)`;
 				} else {
 					canvas.style.top = `${margin}px`;
 					canvas.style.position = `absolute`;
-					canvas.style.marginTop = `0`;
+					canvas.style.marginTop = `calc(100% - ${margin}px)`;
 				}
         	}
 
