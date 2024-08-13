@@ -251,11 +251,11 @@
 				unityInstance = instance;
 				canvas = instance.Module.canvas;
 				onResize();
-				setWindowMargin(50);
+				//setWindowMargin(50);
 			});
 			window.addEventListener('resize', () => {
                 		onResize();
-                		setWindowMargin(50); // Ensure margin is applied on resize
+                		//setWindowMargin(50); // Ensure margin is applied on resize
             			});
 			if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
 				// Mobile device style: fill the whole browser client area with the game canvas:
