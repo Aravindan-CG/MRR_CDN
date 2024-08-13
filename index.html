@@ -158,11 +158,11 @@
 				const isLandscape = window.innerWidth > window.innerHeight;
 				if (isLandscape) {
 					canvas.style.left = `${margin}px`;
-					canvas.style.position = `relative`;
+					canvas.style.position = `absolute`;
 					canvas.style.marginLeft = `0`;
 				} else {
 					canvas.style.top = `${margin}px`;
-					canvas.style.position = `relative`;
+					canvas.style.position = `absolute`;
 					canvas.style.marginTop = `0`;
 				}
         	}
@@ -235,6 +235,7 @@
 				unityInstance = instance;
 				canvas = instance.Module.canvas;
 				onResize();
+				setWindowMargin(50);
 			});
 			window.addEventListener('resize', onResize);
 			onResize();
