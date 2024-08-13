@@ -24,6 +24,7 @@
 			left: 50px; /* 50px margin from the left */
 			width: calc(100% - 50px); /* Adjust width for margin */
 			height: 100%;
+			top: 0;
 		}
 
 		div#gameContainer canvas {
@@ -243,7 +244,6 @@
 				    	canvas.style.height = h + "px";
 				}
 				container.style.top = "0px";
-				container.style.left = "50px";
 			}
 
 			createUnityInstance(canvas, config, progressHandler).then(function (instance) {
