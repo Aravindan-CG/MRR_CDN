@@ -141,12 +141,12 @@
 			
 			function RewardAdSuccess()
 			{
-				console.log("Reward Grant Success");
+				unityInstance.SendMessage("AdsManager", "OnRewardedAdReward");	
 			}
 
 			function RewardFailure()
 			{
-				console.log("Reward Grant Failure");
+				unityInstance.SendMessage("AdsManager", "OnRewardedAdError");
 			}
 
 			function toggleStickyAd(canShow)
