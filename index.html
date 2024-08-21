@@ -127,11 +127,10 @@
 			function triggerRewardAd()
 			{
 				rewardEvent();
-				var eventData = {
-				successCB : RewardAdSuccess,
-				failureCB : RewardFailure
-				};
-				gameAnalytics("rewarded_ad",JSON.stringify(eventData));
+				sendCustomAnalyticsEvent( 'rewarded_ad', {
+				  successCB: RewardAdSuccess,
+				  failureCB: RewardFailure
+				} )
 			}
 			
 			function RewardAdSuccess()
