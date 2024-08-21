@@ -127,16 +127,11 @@
 			function triggerRewardAd()
 			{
 				rewardEvent();
-				try {
-					var eventData = {
-					successCB : RewardAdSuccess,
-					failureCB : RewardFailure
-					};
-					gameAnalytics("rewarded_ad",JSON.stringify(eventData));
-				}
-				catch(err) {
-					console.log("Error in RewardAd analytics: " + err);
-				}
+				var eventData = {
+				successCB : RewardAdSuccess,
+				failureCB : RewardFailure
+				};
+				gameAnalytics("rewarded_ad",JSON.stringify(eventData));
 			}
 			
 			function RewardAdSuccess()
