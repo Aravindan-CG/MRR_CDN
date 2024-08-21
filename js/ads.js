@@ -196,11 +196,11 @@ function runOnAdClosed() {
         if (!isRewardGranted && isRewardedAdClosedByUser) {
             // call game function for not earning reward (failure case)
             console.log("Ad Failed");
-            unityInstance.SendMessage("AdsManager", "OnRewardedAdError");
+            RewardFailure();
         } else {
 
             console.log("Ad Success");
-            unityInstance.SendMessage("AdsManager", "OnRewardedAdReward");
+            RewardAdSuccess();
             // call game function for earned reward  (success case)
         }
         _triggerReason = ''
