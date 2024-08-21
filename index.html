@@ -123,15 +123,6 @@
 				};
 				gameAnalytics("game_replay",JSON.stringify(eventData));
 			}
-
-			function triggerRewardAd()
-			{
-				rewardEvent();
-				sendCustomAnalyticsEvent( 'rewarded_ad', {
-				  successCB: RewardAdSuccess,
-				  failureCB: RewardFailure
-				} )
-			}
 			
 			function RewardAdSuccess()
 			{
@@ -142,7 +133,16 @@
 			{
 				unityInstance.SendMessage("AdsManager", "OnRewardedAdError");
 			}
-
+			
+			function triggerRewardAd()
+			{
+				rewardEvent();
+				sendCustomAnalyticsEvent( 'rewarded_ad', {
+				  successCB: RewardAdSuccess,
+				  failureCB: RewardFailure
+				} )
+			}
+			
 			function toggleStickyAd(canShow)
 			{
 				if(canShow)
