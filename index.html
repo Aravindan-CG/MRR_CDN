@@ -189,7 +189,8 @@
 			{
 				var soundVal = isSoundEnabled ? 1 : 0; //1 - unmute, 0 - mute
 				unityInstance.SendMessage("BG_Music_Knob","ToggleSound",soundVal);
-				unityInstance.SendMessage("SettingsPanel","ToggleMariaVoice",!soundVal);
+				var mariaSound = 1 - soundVal;
+				unityInstance.SendMessage("SettingsPanel","ToggleMariaVoice",mariaSound);
 				unityInstance.SendMessage("Sound_FX_Knob","ToggleSound");
 			}
 
