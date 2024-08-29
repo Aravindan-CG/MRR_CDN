@@ -188,6 +188,7 @@ function rewardedCallbacks(obj) {
 function runOnAdClosed() {
     if (_triggerReason === 'replay') {
         // call game function for replay
+        unityInstance.SendMessage("AdsManager","OnInterstitialShown");
         _triggerReason = ''
         showGame();
         replayInstance = window.GlanceGamingAdInterface.loadRewardedAd(replayObj, rewardedCallbacks);
@@ -202,10 +203,6 @@ function runOnAdClosed() {
         }
         _triggerReason = ''
         rewardInstance = window.GlanceGamingAdInterface.loadRewardedAd(rewardObj, rewardedCallbacks);
-    } else if(_triggerReason === 'interstitial'){
-        unityInstance.SendMessage("AdsManager","OnInterstitialShown");
-        _triggerReason = ''
-        replayInstance = window.GlanceGamingAdInterface.loadRewardedAd(replayObj, rewardedCallbacks);
     }
 }
 
@@ -230,17 +227,6 @@ function rewardEvent()
         runOnAdClosed();
     }
 
-}
-
-function interstitialEvent()
-{
-    _triggerReason = 'interstitial'
-    if(!is_replay_noFill) {
-        window.GlanceGamingAdInterface.showRewarededAd(replayInstance);
-    }
-    else {
-        runOnAdClosed();
-    }
 }
 
 function showGame() {
