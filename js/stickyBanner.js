@@ -34,10 +34,22 @@ function showStickyBannerAd(){
 
 function showStickyAd()
 {
-    $("#bannerOverlay").css("display","flex","important");
+    //$("#bannerOverlay").css("display","flex","important");
+    const banner = document.getElementById('bannerOverlay');
+    if (banner) 
+    {
+        banner.classList.remove('hidden');
+        banner.style.display = 'flex';
+    }
 }
 
 function hideStickyAd()
 {
-    $("#bannerOverlay").css("display","none","important");
+    //$("#bannerOverlay").css("display","none","important");
+    const banner = document.getElementById('bannerOverlay');
+    if (banner) 
+    {
+        banner.classList.add('hidden');
+        banner.style.display = 'none';
+    }
 }
