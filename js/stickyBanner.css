@@ -10,6 +10,12 @@
     z-index: 2;
 }
 
+#bannerOverlay.hidden {
+    height: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
 #banner-ad {
     margin: 0 auto;
 }
