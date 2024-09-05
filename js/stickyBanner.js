@@ -40,6 +40,7 @@ function showStickyAd()
     {
         banner.classList.remove('hidden');
         banner.style.display = 'flex';
+        banner.style.pointerEvents = 'auto';
     }
 }
 
@@ -51,5 +52,6 @@ function hideStickyAd()
     {
         banner.classList.add('hidden');
         banner.style.display = 'none';
+        banner.style.pointerEvents = 'none';
     }
 }
