@@ -50,7 +50,19 @@
 	</style>
 	<link rel="stylesheet" href="js/stickyBanner.css">
 </head>
+<script>
+    window.onfocus = function() {
+        // Call Unity function when the window gains focus
+        // SendMessage('GameManager', 'OnFocus'); // Adjust 'GameManager' and 'OnFocus' to your needs
+	    console.log('app focused');
+    };
 
+    window.onblur = function() {
+        // Call Unity function when the window loses focus
+        // SendMessage('GameManager', 'OnBlur'); // Adjust accordingly
+	    console.log('app not on focus');
+    };
+</script>
 <body>
 	<div id="gameContainer">
 		<canvas id="unity-canvas" data-pixel-art="{{{ OPTIMIZE_FOR_PIXEL_ART }}}"></canvas>
